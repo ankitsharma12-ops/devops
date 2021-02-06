@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("checkout"){
+        stage("checkout from thamo git repo"){
             steps{
                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/thamunkpillai/webapplication.git']]])
             }
